@@ -75,7 +75,7 @@ for (( i=0; i<$BUCK_A_CYCLE; i++ )); do
 				sed -i "s/TAR_BUCK_A/"$BUCK_A_CUR"/g" temp.gin
 				sed -i "s/TAR_BUCK_RHO/"$BUCK_RHO_CUR"/g" temp.gin
 
-                SUM_SQ_RES=""
+				SUM_SQ_RES=""
 
 				$PRO_PREFIX < temp.gin > "$i"_"$j"_"$k"_"$l".out
 
@@ -83,11 +83,11 @@ for (( i=0; i<$BUCK_A_CYCLE; i++ )); do
 
 					SUM_SQ_RES=$( grep "$SUM_SQ_STRING" "$i"_"$j"_"$k"_"$l".out | awk '{print $6}' )
 
-                    if [ -z $SUM_SQ_RES ]; then
-                        rm "$i"_"$j"_"$k"_"$l".out
-                    else
-                        echo "$i"_"$j"_"$k"_"$l"     $SUM_SQ_RES >> result.txt
-                    fi
+				    	if [ -z $SUM_SQ_RES ]; then
+						rm "$i"_"$j"_"$k"_"$l".out
+				    	else
+						echo "$i"_"$j"_"$k"_"$l"     $SUM_SQ_RES >> result.txt
+				    	fi
 				fi
 
 				rm temp.gin
