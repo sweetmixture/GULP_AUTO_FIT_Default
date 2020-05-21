@@ -1,0 +1,35 @@
+# 
+# Keywords:
+# 
+relax fit conp comp  
+# 
+# Options:
+# 
+title
+Tin_Mono_oxide test file                                                        
+end
+cell
+   3.798600   3.798600   4.840800  90.000000  90.000000  90.000000
+fractional  1   
+Sn    core 0.0000000 0.5000000 0.2368999 
+O     core 0.0000000 0.0000000 0.0000000 0.04000000 1.00000 0.00000             
+Sn    shel 0.0000000 0.5000000 0.2368999 
+O     shel 0.0000000 0.0000000 0.0000000 -2.0400000 1.00000 0.00000             
+space
+129
+totalenergy           -61.2890027449 eV
+species   4
+Sn     core    TAR_CHARGE_CORE                  
+Sn     shel    TAR_CHARGE_SHELL          
+O      core    0.040000                  
+O      shel   -2.040000                  
+buck     
+O     shel Sn    shel  TAR_BUCK_A    TAR_BUCK_RHO  0.0000000      0.00 12.00 1 1 0
+buck     
+O     shel O     shel  9547.9600     0.219200  32.000000      0.00 12.00 0 0 0
+spring
+O      6.3000000     0
+spring
+Sn     TAR_SPRING     1
+dump every      1 al_sno_next.gin                                             
+output cif sno_alpha.cif                                               
